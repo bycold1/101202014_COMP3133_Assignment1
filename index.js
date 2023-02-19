@@ -1,7 +1,8 @@
 const {ApolloServer} = require('apollo-server');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const MONGODB = "mongodb+srv://bycold:sabedra123@bycold.1ous9oq.mongodb.net/COMP3133_Assignment1?retryWrites=true&w=majority"
+const MONGODB = process.env.MONGODB_URI;
 ;
 
 const typeDefs = require('./graphql/typeDefs');
